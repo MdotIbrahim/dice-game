@@ -1,0 +1,150 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #2d2d2d;
+}
+
+header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 350%;
+    color: whitesmoke;
+    font-family: "poor richard", Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: whitesmoke;
+    font-size: 150%;
+}
+
+button {
+    width: 60px;
+    height: 30px;
+    border-radius: 8px;
+    background: #f1f11a;
+    border-color: whitesmoke;
+    position: relative;
+    transition: top ease 0.5s;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #df1010;
+}
+
+.container {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    /* border: 1px solid #fff; */
+    width: 100%;
+    height: 75%;
+
+}
+
+.square {
+    position: relative;
+    width: 90vmin;
+    border: solid #ffbb00;
+    box-sizing: border-box;
+    /* display: flex;
+    justify-content: center; */
+
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 10%;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+}
+
+#roll {
+    width: 15%;
+    height: 10%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    font-size: 130%;
+    margin-bottom: 13%;
+    /* align-content: flex-end; */
+}
+
+#player1 {
+    align-self: flex-start;
+    padding-right: 50%;
+    position: absolute;
+}
+
+#player2 {
+    align-self: flex-start;
+    padding-left: 50%;
+    position: absolute;
+}
+
+#score1 {
+    align-self: center;
+    /* padding-bottom: 25%; */
+    padding-right: 50%;
+    position: absolute;
+}
+#score2 {
+    align-self: center;
+    /* padding-bottom: 25%; */
+    padding-left: 50%;
+    position: absolute;
+}
+
+#saveScore1 {
+    align-self: flex-end;
+    /* padding-bottom: 25%; */
+    padding-right: 50%;
+    position: absolute;
+}
+
+#saveScore2 {
+    align-self: flex-end;
+    /* padding-bottom: 25%; */
+    padding-left: 50%;
+    position: absolute;
+}
+
+.dice {
+    /* size:2%; */
+    width: 20%;
+    padding-top: 5%;
+    align-self: center;
+    position: absolute;
+    /* display: none; */
+}
+
+#startAgain {
+    align-self: flex-start;
+    position: absolute;
+    width: 15%;
+    height: 10%;
+    margin-top: 10%;
+}
+
+#hold {
+    width: 15%;
+    height: 10%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    font-size: 130%;
+    margin-bottom: 1%;
+}
