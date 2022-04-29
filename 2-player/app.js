@@ -4,6 +4,8 @@ let saveScore1 = 0;
 let saveScore2 = 0;
 let holdValue = 1;
 let randomDiceNumber = 0;
+let winCount1 = 0;
+let winCount2 = 0;
 
 let score1InHTML = document.getElementById("score1");
 let score2InHTML = document.getElementById("score2");
@@ -22,6 +24,8 @@ let diceList = [dice1, dice2, dice3, dice4 , dice5 , dice6];
 const rollButton = document.getElementById("roll");
 const startButton = document.getElementById("startAgain");
 const holdButton = document.getElementById("hold");
+let winCount1InHTML = document.getElementById("wincount1");
+let winCount2InHTML = document.getElementById("wincount2");
 
 const checkDice = (dicenum, score1, score2) => {
     if (dicenum == 1) {
@@ -32,12 +36,18 @@ const checkDice = (dicenum, score1, score2) => {
         player1InHTML.textContent = `You Won!`;
         rollButton.style.display = "none";
         holdButton.style.display = "none";
+        winCount1 += 1
+        winCount1InHTML.style.display = "block";
+        winCount1InHTML.textContent = `${winCount1}`
     }else if (score2 > 20) {
         score2InHTML.style.color = "#016FB9"
         score2InHTML.innerHTML  = `Score: ${score2}`;
         player2InHTML.textContent = `You Won!`;
         rollButton.style.display = "none";
         holdButton.style.display = "none";
+        winCount2 += 1
+        winCount2InHTML.style.display = "block";
+        winCount2InHTML.textContent = `${winCount2}`
     }
 }
 
@@ -60,7 +70,7 @@ const switchSide = () => {
         if (randomDiceNumber != 1){
             saveScore2 = score2;
         }else{
-            score2InHTML.textContent = `Score reset to ${saveScore2}`;
+            score2InHTML.textContent = `Score reset to ${saveScore2}!`;
             // score2 = 0 //error
             score2 = saveScore2
         }
@@ -123,4 +133,5 @@ startButton.addEventListener("click", () => {
 holdButton.addEventListener("click", () => {
     switchSide()
 })
+
 

@@ -23,15 +23,27 @@ button {
     width: 60px;
     height: 30px;
     border-radius: 8px;
-    background: #f1f11a;
+    background: crimson;
+    color: whitesmoke;
     border-color: whitesmoke;
     position: relative;
     transition: top ease 0.5s;
+    box-shadow: 0 4px crimson;
+    transition-duration: 0.5s;
 }
 
 button:hover {
     cursor: pointer;
-    background: #df1010;
+    background: #016FB9;
+    box-shadow: 0 4px #016FB9; 
+    
+}
+
+button:active {
+    background: yellow;
+    box-shadow: 0 1px yellow;
+    color: black;
+    transform: translatey(2px);
 }
 
 .container {
@@ -47,11 +59,8 @@ button:hover {
 .square {
     position: relative;
     width: 90vmin;
-    border: solid #ffbb00;
+    border: solid #016FB9;
     box-sizing: border-box;
-    /* display: flex;
-    justify-content: center; */
-
 }
 
 .square:after {
@@ -79,7 +88,6 @@ button:hover {
     position: absolute;
     font-size: 130%;
     margin-bottom: 13%;
-    /* align-content: flex-end; */
 }
 
 #player1 {
@@ -96,38 +104,32 @@ button:hover {
 
 #score1 {
     align-self: center;
-    /* padding-bottom: 25%; */
     padding-right: 50%;
     position: absolute;
 }
 #score2 {
     align-self: center;
-    /* padding-bottom: 25%; */
     padding-left: 50%;
     position: absolute;
 }
 
 #saveScore1 {
     align-self: flex-end;
-    /* padding-bottom: 25%; */
     padding-right: 50%;
     position: absolute;
 }
 
 #saveScore2 {
     align-self: flex-end;
-    /* padding-bottom: 25%; */
     padding-left: 50%;
     position: absolute;
 }
 
 .dice {
-    /* size:2%; */
     width: 20%;
     padding-top: 5%;
     align-self: center;
     position: absolute;
-    /* display: none; */
 }
 
 #startAgain {
@@ -141,10 +143,21 @@ button:hover {
 #hold {
     width: 15%;
     height: 10%;
-    display:flex;
     justify-content: center;
     align-items: flex-end;
     position: absolute;
     font-size: 130%;
     margin-bottom: 1%;
+}
+
+#wincount1 {
+    align-self: flex-start;
+    padding-right: 90%;
+    position: absolute;
+}
+#wincount2 {
+    align-self: flex-start;
+    padding-left: 90%;
+    position: absolute;
+    
 }
