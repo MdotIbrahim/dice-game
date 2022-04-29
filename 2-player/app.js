@@ -24,7 +24,9 @@ const startButton = document.getElementById("startAgain");
 const holdButton = document.getElementById("hold");
 
 const checkDice = (dicenum, score1, score2) => {
-    if (score1 > 20) {
+    if (dicenum == 1) {
+        switchSide()
+    }else if (score1 > 20) {
         score1InHTML.style.color = "#016FB9"
         score1InHTML.textContent = `Score: ${score1}`;
         player1InHTML.textContent = `You Won!`;
@@ -36,11 +38,7 @@ const checkDice = (dicenum, score1, score2) => {
         player2InHTML.textContent = `You Won!`;
         rollButton.style.display = "none";
         holdButton.style.display = "none";
-    }else if (dicenum == 1 && holdValue == 1) {
-        switchSide()
-    }else if (dicenum == 1 && holdValue == 2) {
-        switchSide()
-        }
+    }
 }
 
 const switchSide = () => {
@@ -125,5 +123,4 @@ startButton.addEventListener("click", () => {
 holdButton.addEventListener("click", () => {
     switchSide()
 })
-
 
